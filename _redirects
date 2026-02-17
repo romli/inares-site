@@ -1,0 +1,5 @@
+# Redirect old URLs jika ada
+/home    /index.html    301
+/catalog /katalog.html  301
+/order   /cara-order.html 301
+/about   /tentang.html  301

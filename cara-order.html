@@ -1,81 +1,190 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cara Order — Inares</title>
+  <title>Cara Order — Inares Homebedding</title>
+  <meta name="description" content="Cara order produk Inares. Pilih produk, klik WhatsApp, dan admin bantu sampai selesai." />
+  <link rel="canonical" href="https://inares.pages.dev/cara-order.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/style.css" />
+  <script>(function(){var t=localStorage.getItem('inares-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
+<body data-page="cara-order">
 
-<body>
-
-  <div class="nav">
+  <nav class="nav">
     <div class="container nav-inner">
-      <div class="brand">Inares</div>
-      <div class="menu">
+      <div class="brand">
+        <a href="index.html">
+          <img class="brand-logo logo-dark" src="assets/logo-white.png" alt="Inares" />
+          <img class="brand-logo logo-light" src="assets/logo-dark.png" alt="Inares" />
+        </a>
+      </div>
+      <div class="nav-menu">
         <a href="index.html">Home</a>
         <a href="katalog.html">Katalog</a>
-        <a href="cara-order.html"><strong>Cara Order</strong></a>
+        <a href="cara-order.html" class="active">Cara Order</a>
         <a href="tentang.html">Tentang</a>
       </div>
-      <a class="btn primary" target="_blank" rel="noopener"
-         href="https://wa.me/6285643383884?text=Halo%20Inares,%20saya%20mau%20order.%20Mohon%20info%20motif%20yang%20ready.">
-        WhatsApp
-      </a>
+      <div class="nav-right">
+        <div class="nav-market">
+          <a class="shopee" href="https://shopee.co.id/inaresofficial" target="_blank" rel="noopener" title="Shopee">S</a>
+          <a class="tokped" href="https://www.tokopedia.com/inaresofficial" target="_blank" rel="noopener" title="Tokopedia">T</a>
+        </div>
+        <button class="theme-toggle" title="Ganti tema">
+          <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
+        </button>
+        <a class="btn-wa-nav" href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20order." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">🏠 Home</a>
+    <a href="katalog.html">🛍 Katalog</a>
+    <a href="cara-order.html" class="active">📋 Cara Order</a>
+    <a href="tentang.html">💬 Tentang</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-market-links">
+      <a class="shopee" href="https://shopee.co.id/inaresofficial" target="_blank" rel="noopener">🛍 Shopee</a>
+      <a class="tokped" href="https://www.tokopedia.com/inaresofficial" target="_blank" rel="noopener">🟢 Tokopedia</a>
+    </div>
+    <a href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20order." target="_blank" rel="noopener" class="btn btn-wa" style="justify-content:center;margin-top:8px">💬 Chat WhatsApp</a>
   </div>
 
   <div class="container">
-    <div class="section-title">
-      <div>
-        <h2>Cara Order</h2>
-        <p>Simple, cepat, dan dibantu admin sampai selesai.</p>
+    <div class="page-header fade-up">
+      <h1>Cara Order</h1>
+      <p>Simpel, cepat, dan dibantu admin sampai pesanan sampai di tanganmu.</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="section fade-up">
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Pilih Produk & Ukuran</h3>
+          <p>Browse katalog dan pilih sprei, bedcover, atau paket sesuai ukuran kasurmu (120 / 160 / 180).</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Klik Tombol WA</h3>
+          <p>Tombol WhatsApp sudah otomatis terisi nama produk, bahan, dan ukuran yang kamu pilih.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Admin Kirim Motif</h3>
+          <p>Admin akan membalas dengan foto pilihan motif terbaru yang ready stok.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>Pesanan Dikirim</h3>
+          <p>Setelah konfirmasi motif dan pembayaran, pesanan langsung diproses dan dikirim.</p>
+        </div>
       </div>
     </div>
 
-    <div class="hero-card">
-      <ol style="margin:0; padding-left:18px">
-        <li><strong>Pilih produk</strong> (Sprei / Bedcover / Paket / Sarung)</li>
-        <li><strong>Pilih ukuran</strong> sesuai kebutuhan</li>
-        <li><strong>Klik tombol WhatsApp</strong> pada produk</li>
-        <li>Admin akan mengirim <strong>pilihan motif</strong> yang ready</li>
-        <li>Admin kirim <strong>total harga</strong> + info pengiriman</li>
-        <li>Pesanan diproses & dikirim</li>
-      </ol>
+    <!-- CTA -->
+    <div style="text-align:center; padding: 12px 0 36px">
+      <a class="btn btn-wa" href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20order.%20Mohon%20info%20motif%20yang%20ready." target="_blank" rel="noopener" style="font-size:16px;padding:14px 32px">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        Mulai Order Sekarang
+      </a>
     </div>
 
-    <div class="section-title">
-      <div>
-        <h2>Tips</h2>
-        <p>Supaya order lebih cepat diproses.</p>
+    <!-- Tips -->
+    <div class="section fade-up">
+      <div class="section-header">
+        <div>
+          <h2>Tips Order Cepat</h2>
+          <p>Supaya pesananmu lebih cepat diproses.</p>
+        </div>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">📏</div>
+          <h3>Pastikan Ukuran Kasur</h3>
+          <p>Ukur kasurmu dulu: 120×200, 160×200, atau 180×200 cm. Ini yang paling sering salah beli.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🧵</div>
+          <h3>Pilih Bahan Favorit</h3>
+          <p>Embos, Mikrotek, atau Katun Lokal — setiap bahan punya tekstur dan harga yang berbeda.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🎨</div>
+          <h3>Tanya Motif Terbaru</h3>
+          <p>Admin selalu update stok motif. Tanya motif yang ready agar tidak menunggu lama.</p>
+        </div>
       </div>
     </div>
 
-    <div class="grid">
-      <div class="badge">
-        <strong>Pastikan ukuran</strong>
-        <span>Misal: 160x200 atau 180x200.</span>
-      </div>
-      <div class="badge">
-        <strong>Pilih bahan</strong>
-        <span>Embos / Mikrotek / Katun Lokal.</span>
-      </div>
-      <div class="badge">
-        <strong>Tanya motif ready</strong>
-        <span>Admin akan kirim opsi motif terbaru.</span>
+    <!-- Also available at -->
+    <div class="store-links-section fade-up">
+      <h3>Juga Tersedia di Marketplace</h3>
+      <p>Prefer belanja lewat Shopee atau Tokopedia? Bisa juga!</p>
+      <div class="store-link-btns">
+        <a class="store-link-btn shopee" href="https://shopee.co.id/inaresofficial" target="_blank" rel="noopener">🛍 Beli di Shopee</a>
+        <a class="store-link-btn tokped" href="https://www.tokopedia.com/inaresofficial" target="_blank" rel="noopener">🟢 Beli di Tokopedia</a>
       </div>
     </div>
 
-    <div class="footer">
-      <div><strong>Inares</strong> — Cara Order</div>
-      <div>WhatsApp: 6285643383884 • Instagram: @inaresofficial</div>
-    </div>
+    <!-- Footer -->
+    <footer class="footer" style="margin-top:0">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img class="logo-dark" src="assets/logo-white.png" alt="Inares" style="height:30px" />
+            <img class="logo-light" src="assets/logo-dark.png" alt="Inares" style="height:30px" />
+          </div>
+          <p class="footer-tagline">Homebedding nyaman untuk keluarga.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="cara-order.html">Cara Order</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Toko Online</h4>
+          <div class="footer-market-links">
+            <a class="footer-market-link shopee" href="https://shopee.co.id/inaresofficial" target="_blank" rel="noopener">🛍 Shopee</a>
+            <a class="footer-market-link tokped" href="https://www.tokopedia.com/inaresofficial" target="_blank" rel="noopener">🟢 Tokopedia</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Inares. All rights reserved.</p>
+        <p>Made with ❤️ in Yogyakarta</p>
+      </div>
+    </footer>
   </div>
 
-  <a class="wa-float" target="_blank" rel="noopener"
-     href="https://wa.me/6285643383884?text=Halo%20Inares,%20saya%20mau%20order.%20Mohon%20info%20motif%20yang%20ready.">
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header"><h3>🛒 Keranjang Pilihan</h3><button class="cart-close">×</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span class="label">Estimasi Total</span><span class="amount">Rp 0</span></div>
+      <a class="btn btn-wa cart-wa-btn" href="#">Order Semua via WhatsApp</a>
+      <button class="btn btn-sm" onclick="clearCart()">Kosongkan</button>
+    </div>
+  </div>
+  <button class="cart-fab" title="Keranjang">🛒<span class="cart-fab-badge">0</span></button>
+
+  <a class="wa-float" href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20order." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
     WhatsApp
   </a>
 
+  <script src="assets/app.js"></script>
 </body>
 </html>

@@ -3,17 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Katalog Produk — Inares Homebedding</title>
-  <meta name="description" content="Lihat katalog lengkap sprei, bedcover, dan sarung bantal Inares. Filter berdasarkan kategori dan bahan. Order langsung via WhatsApp." />
-  <link rel="canonical" href="https://inares.pages.dev/katalog.html" />
-  <meta property="og:title" content="Katalog Produk — Inares Homebedding" />
-  <meta property="og:description" content="Sprei, bedcover, sarung bantal dengan berbagai pilihan bahan dan ukuran." />
+  <title>Detail Produk — Inares Homebedding</title>
+  <meta name="description" content="Detail produk Inares. Lihat spesifikasi, ukuran, harga, dan order langsung via WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/style.css" />
   <script>(function(){var t=localStorage.getItem('inares-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
-<body data-page="katalog">
+<body data-page="detail">
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -25,7 +22,7 @@
       </div>
       <div class="nav-menu">
         <a href="index.html">Home</a>
-        <a href="katalog.html" class="active">Katalog</a>
+        <a href="katalog.html">Katalog</a>
         <a href="cara-order.html">Cara Order</a>
         <a href="tentang.html">Tentang</a>
       </div>
@@ -37,7 +34,7 @@
         <button class="theme-toggle" title="Ganti tema">
           <span class="icon-moon">🌙</span><span class="icon-sun">☀️</span>
         </button>
-        <a class="btn-wa-nav" href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20tanya%20katalog%20produk." target="_blank" rel="noopener">
+        <a class="btn-wa-nav" href="https://wa.me/6285643383884?text=Halo%20Inares." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           <span>WhatsApp</span>
         </a>
@@ -48,7 +45,7 @@
 
   <div class="mobile-menu">
     <a href="index.html">🏠 Home</a>
-    <a href="katalog.html" class="active">🛍 Katalog</a>
+    <a href="katalog.html">🛍 Katalog</a>
     <a href="cara-order.html">📋 Cara Order</a>
     <a href="tentang.html">💬 Tentang</a>
     <div class="mobile-menu-divider"></div>
@@ -59,30 +56,14 @@
     <a href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20order." target="_blank" rel="noopener" class="btn btn-wa" style="justify-content:center;margin-top:8px">💬 Chat WhatsApp</a>
   </div>
 
-  <div class="container">
-    <div class="page-header fade-up">
-      <h1>Katalog Produk</h1>
-      <p>Pilih produk, klik WhatsApp, admin bantu proses pesanan.</p>
-    </div>
+  <!-- Main Detail Content (populated by JS) -->
+  <div class="container" id="detailContainer" style="padding-bottom: 40px;">
+    <!-- Loading skeleton shown here by JS -->
+  </div>
 
-    <!-- Category Pills -->
-    <div class="category-pills fade-up" id="categoryPills">
-      <!-- populated by JS -->
-    </div>
-
-    <!-- Filters -->
-    <div class="filters fade-up">
-      <select class="filter-select" id="filterKategori"></select>
-      <select class="filter-select" id="filterBahan"></select>
-      <input class="filter-search" id="search" placeholder="Cari produk... (misal: 160, embos, paket)" />
-      <span class="filter-count" id="filterCount">Memuat...</span>
-    </div>
-
-    <!-- Grid -->
-    <div class="grid" id="grid"></div>
-
-    <!-- Footer -->
-    <footer class="footer" style="margin-top:40px">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
@@ -116,9 +97,19 @@
         <p>© 2025 Inares. All rights reserved.</p>
         <p>Made with ❤️ in Yogyakarta</p>
       </div>
-    </footer>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Order Bar -->
+  <div class="sticky-order">
+    <a class="btn btn-wa" id="stickyWA" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      Order WA
+    </a>
+    <button class="btn" id="stickyCart">🛒 Keranjang</button>
   </div>
 
+  <!-- Cart -->
   <div class="cart-overlay"></div>
   <div class="cart-drawer">
     <div class="cart-header">
@@ -132,20 +123,15 @@
         <span class="amount">Rp 0</span>
       </div>
       <a class="btn btn-wa cart-wa-btn" href="#">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
         Order Semua via WhatsApp
       </a>
       <button class="btn btn-sm" onclick="clearCart()">Kosongkan Keranjang</button>
-      <p class="cart-note">💡 Admin akan konfirmasi motif & harga final</p>
+      <p class="cart-note">💡 Admin konfirmasi motif & harga final</p>
     </div>
   </div>
 
   <button class="cart-fab" title="Keranjang">🛒<span class="cart-fab-badge">0</span></button>
-
-  <a class="wa-float" href="https://wa.me/6285643383884?text=Halo%20Inares%2C%20saya%20mau%20tanya%20katalog." target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.124 1.528 5.855L0 24l6.335-1.508C8.054 23.455 9.987 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.655-.52-5.163-1.426l-.37-.22-3.762.896.957-3.67-.242-.38C2.524 15.618 2 13.872 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-    WhatsApp
-  </a>
 
   <script src="assets/app.js"></script>
 </body>
