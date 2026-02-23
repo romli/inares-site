@@ -122,12 +122,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .brand-logo {
   height: 36px;
   width: auto;
+  max-width: 160px;
+  display: block;
   color: var(--text);
   transition: color var(--transition);
 }
 .footer-logo-svg {
   height: 22px;
   width: auto;
+  max-width: 120px;
+  display: block;
   color: var(--text);
   transition: color var(--transition);
 }
