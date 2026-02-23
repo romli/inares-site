@@ -126,7 +126,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: color var(--transition);
 }
 .footer-logo-svg {
-  height: 30px;
+  height: 22px;
   width: auto;
   color: var(--text);
   transition: color var(--transition);
