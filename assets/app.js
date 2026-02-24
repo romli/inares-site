@@ -207,18 +207,9 @@ function unique(arr) {
 }
 
 function imgSrc(url) {
-  if (!url || url.includes("(isi") || !url.startsWith("http")) {
-    return "https://placehold.co/600x400/f3ece0/b8834a?text=Inares";
-  }
-  // Auto-convert GitHub blob URL → raw URL
-  // Dari: https://github.com/user/repo/blob/main/foto.png
-  // Ke:   https://raw.githubusercontent.com/user/repo/main/foto.png
-  if (url.includes("github.com") && url.includes("/blob/")) {
-    url = url
-      .replace("github.com", "raw.githubusercontent.com")
-      .replace("/blob/", "/");
-  }
-  return url;
+  return (url && !url.includes("(isi") && url.startsWith("http"))
+    ? url
+    : "https://placehold.co/600x400/f3ece0/b8834a?text=Inares";
 }
 
 // ── FETCH ──
@@ -558,6 +549,59 @@ async function initDetailPage() {
   const stickyCart = document.querySelector("#stickyCart");
   if (stickyWA) stickyWA.href = waHref;
   if (stickyCart) stickyCart.onclick = () => addToCart(item);
+
+  // Lightbox: klik gambar produk untuk zoom
+  const detailImg = container.querySelector(".detail-img-wrap img");
+  if (detailImg) {
+    detailImg.addEventListener("click", () => {
+      openLightbox(detailImg.src, item.nama_produk);
+    });
+  }
+}
+
+// ── LIGHTBOX ──
+function initLightbox() {
+  // Create overlay element once
+  if (document.getElementById("lightbox")) return;
+  const overlay = document.createElement("div");
+  overlay.id = "lightbox";
+  overlay.className = "lightbox-overlay";
+  overlay.innerHTML = `
+    <div class="lightbox-img-wrap">
+      <img id="lightbox-img" src="" alt="" />
+      <button class="lightbox-close" title="Tutup">×</button>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  // Close on overlay background click
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) closeLightbox();
+  });
+
+  // Close button
+  overlay.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+
+  // Close on Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+  });
+}
+
+function openLightbox(src, alt) {
+  initLightbox();
+  const overlay = document.getElementById("lightbox");
+  const img     = document.getElementById("lightbox-img");
+  img.src = src;
+  img.alt = alt || "";
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById("lightbox");
+  if (!overlay) return;
+  overlay.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
 // ── MOBILE MENU ──

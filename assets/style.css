@@ -1344,6 +1344,76 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .page-header p { font-size: 16px; color: var(--muted); }
 
+/* ── Lightbox ── */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.lightbox-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-img-wrap {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+}
+.lightbox-img-wrap img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 32px 80px rgba(0,0,0,.6);
+  animation: lightboxIn .25s cubic-bezier(.4,0,.2,1) both;
+}
+@keyframes lightboxIn {
+  from { transform: scale(.92); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.lightbox-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-md);
+  line-height: 1;
+}
+.lightbox-close:hover { background: var(--bg2); transform: scale(1.1); }
+
+/* Detail image — cursor zoom-in hint */
+.detail-img-wrap {
+  cursor: zoom-in;
+}
+.detail-img-wrap img {
+  transition: transform .3s ease;
+}
+.detail-img-wrap:hover img {
+  transform: scale(1.02);
+}
+
 /* ── Animations ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
