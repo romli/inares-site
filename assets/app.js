@@ -207,9 +207,18 @@ function unique(arr) {
 }
 
 function imgSrc(url) {
-  return (url && !url.includes("(isi") && url.startsWith("http"))
-    ? url
-    : "https://placehold.co/600x400/f3ece0/b8834a?text=Inares";
+  if (!url || url.includes("(isi") || !url.startsWith("http")) {
+    return "https://placehold.co/600x400/f3ece0/b8834a?text=Inares";
+  }
+  // Auto-convert GitHub blob URL → raw URL
+  // Dari: https://github.com/user/repo/blob/main/foto.png
+  // Ke:   https://raw.githubusercontent.com/user/repo/main/foto.png
+  if (url.includes("github.com") && url.includes("/blob/")) {
+    url = url
+      .replace("github.com", "raw.githubusercontent.com")
+      .replace("/blob/", "/");
+  }
+  return url;
 }
 
 // ── FETCH ──
