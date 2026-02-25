@@ -631,10 +631,14 @@ function initMobileMenu() {
 
 // ── ACTIVE NAV ──
 function setActiveNav() {
-  const path = location.pathname.split("/").pop() || "index.html";
+  // Normalize path: strip .html extension and trailing slash for consistent comparison
+  const rawPath = location.pathname.split("/").pop() || "index.html";
+  const path = rawPath.replace(/\.html$/, "") || "index";
+
   document.querySelectorAll(".nav-menu a, .mobile-menu a").forEach(a => {
-    const href = a.getAttribute("href")?.split("/").pop() || "";
-    a.classList.toggle("active", href === path || (path === "" && href === "index.html"));
+    const rawHref = a.getAttribute("href")?.split("/").pop() || "";
+    const href = rawHref.replace(/\.html$/, "") || "index";
+    a.classList.toggle("active", href === path);
   });
 }
 
