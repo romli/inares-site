@@ -11,22 +11,25 @@
   <style>
     /* ── Lightbox ── */
     .lightbox-overlay {
-      display: none;
       position: fixed;
       inset: 0;
       z-index: 500;
       background: rgba(0,0,0,.88);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
+      display: flex;
       align-items: center;
       justify-content: center;
       cursor: zoom-out;
       opacity: 0;
-      transition: opacity .25s ease;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .25s ease, visibility .25s ease;
     }
     .lightbox-overlay.open {
-      display: flex;
       opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
     .lightbox-img-wrap {
       position: relative;
