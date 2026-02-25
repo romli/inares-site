@@ -472,6 +472,7 @@ async function initDetailPage() {
       <div>
         <div class="detail-img-wrap">
           <img src="${imgSrc(item.foto_url)}" alt="${item.nama_produk}" />
+          <div class="detail-img-zoom-hint">🔍 Tap untuk zoom</div>
         </div>
       </div>
 

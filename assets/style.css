@@ -1406,6 +1406,24 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* Detail image — cursor zoom-in hint */
 .detail-img-wrap {
   cursor: zoom-in;
+  position: relative;
+}
+.detail-img-zoom-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+.detail-img-wrap:hover .detail-img-zoom-hint {
+  opacity: 0;
 }
 .detail-img-wrap img {
   transition: transform .3s ease;
